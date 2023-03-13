@@ -10,15 +10,28 @@ public class Stack<TInfo> {
     }
     public TInfo pop()
     {
-        Node<TInfo> ptr = head;
-        head = head.next;
-        return ptr.info;
+        if (!empty())
+        {
+            Node<TInfo> ptr = head;
+            head = head.next;
+            return ptr.info;
+        }
+        else
+        {
+            return null;
+        }
     }
     public TInfo top()
     {
-        return head.info;
+        return (head != null ? head.info : null);
     }
-
+    public void erase()
+    {
+        while (!empty())
+        {
+            pop();
+        }
+    }
     @Override
     public String toString() {
         String result = "";
