@@ -1,6 +1,6 @@
-package lab1.stack.node;
+package lab1.stack;
 
-public class Node<TInfo> {
+class Node<TInfo> {
     TInfo info;
     Node<TInfo> next;
     Node(TInfo elem, Node<TInfo> next)
